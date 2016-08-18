@@ -74,11 +74,13 @@ def result():
        results = {'survival chances': score[0,1], 'death chances': score[0,0]}
        return flask.jsonify(results)
 
-
 if __name__ == '__main__':
-    '''Connects to the server'''
+    app.run(debug=True) 
 
-    HOST = '127.0.0.1'
-    PORT = 4000
-
-    app.run(HOST, PORT)
+#if __name__ == '__main__':
+#    '''Connects to the server'''
+#
+#    HOST = '127.0.0.1'
+#    PORT = 4000
+#
+#    app.run(HOST, PORT)
